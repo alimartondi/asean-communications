@@ -1,16 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", sans-serif !important;
+}
+
+:root {
+  --color-primary: #262161;
+  --color-secondary: #fbaf41;
+  --color-tertiary: #ef3f37;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 * {
   box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0 !important;
+}
+
+.main-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.second-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.third-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.bg-main-blue {
+  background-color: var(--color-primary);
+}
+
+.header,
+.nav-bar {
+  transition: all 0.3s ease-in;
+}
+
+.nav-bar {
+  position: absolute;
+  padding-top: 70px;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-primary);
+  z-index: -1;
+}
+
+.c-nav-link {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.c-nav-link:hover {
+  color: var(--color-secondary);
+}
+
+.nav-bar.active {
+  left: 0;
+}
+
+.humberger-menu {
+  cursor: pointer;
+}
+
+.header.scrolled {
+  background-color: var(--color-primary);
+  transition: all 0.3s ease-in;
+}
+
+.hero {
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  transform: scaleX(4);
+}
+
+.form-outline > .form-control {
+  background-color: #e2e2e2;
+  border-color: #e2e2e2;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.form-outline > .form-control:focus {
+  box-shadow: none;
+  border-color: var(--color-primary);
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.btn.main-button {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-weight: 600;
+  padding: 12px 24px;
+  letter-spacing: 2px;
+}
+
+.btn.main-button:hover {
+  background-color: #352f81;
+  color: #fff;
+  transition: all 0.3s ease;
+  letter-spacing: 3px;
+}
+
+.btn.main-button:hover > .arrow-right {
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.footer-link {
+  color: var(--color-primary);
+  font-weight: 500;
 }
