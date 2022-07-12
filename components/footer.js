@@ -6,15 +6,15 @@ export default function Footer() {
   return (
     <footer className="py-3 py-lg-5">
       <div className="container">
-        <div className="row">
+        <div className="row mb-lg-5">
           <div className="col-lg-12">
             <hr />
           </div>
         </div>
         <div className="row">
           <div className="col-lg-6 d-flex mb-3 mb-lg-0">
-            <div>
-              <h5>Our Network</h5>
+            <div className="w-50">
+              <h5 className="mb-3">Our Network</h5>
               <ul>
                 <li>
                   <Scroll to="hero" spy={true} className="footer-link">
@@ -38,8 +38,8 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="ms-5">
-              <h5>Quik Links</h5>
+            <div className="w-50">
+              <h5 className="mb-3">Quik Links</h5>
               <ul>
                 <li>
                   <Link href="/">
@@ -70,8 +70,8 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-lg-6 d-flex">
-            <div>
-              <h5>Contact</h5>
+            <div className="w-50">
+              <h5 className="mb-3">Contact</h5>
               <ul>
                 <li>email@address.info</li>
                 <li>another@mail.info</li>
@@ -79,10 +79,11 @@ export default function Footer() {
                 <li>021 909534905</li>
               </ul>
             </div>
-            <div className="ms-5">
-              <h5>Address</h5>
+            <div className="w-50">
+              <h5 className="mb-3">Address</h5>
               <p>
-                Jl. Something In Jakarta, <br /> No.32 Jakarta, Indonesia
+                Jl. Something In <br /> Jakarta, No.32
+                <br /> Jakarta, Indonesia
               </p>
             </div>
           </div>

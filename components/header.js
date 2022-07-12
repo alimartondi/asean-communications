@@ -52,6 +52,14 @@ export default function Header() {
             Network
           </Link>
           <Link
+            to="about"
+            spy={true}
+            onClick={handleClick}
+            className="c-nav-link"
+          >
+            About
+          </Link>
+          <Link
             to="services"
             spy={true}
             onClick={handleClick}

@@ -1,9 +1,9 @@
+import { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import { Fragment } from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { ArrowRightShort } from "react-bootstrap-icons";
+import { ArrowLeftShort, ArrowRightShort, X } from "react-bootstrap-icons";
 
 export default function Home() {
   return (
@@ -31,10 +31,10 @@ export default function Home() {
                   Our
                   <br /> Netwrok
                 </h2>
-                <hr />
               </div>
               <div className="row">
                 <div className="col-lg-12">
+                  <hr />
                   <p>logo here</p>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services py-5 bg-main-blue">
+        <section className="services py-5 my-lg-5 bg-main-blue">
           <div className="container">
             <div className="row mb-3">
               <div className="col-lg-6">
@@ -98,7 +98,15 @@ export default function Home() {
             </div>
             <div className="row">
               <div className="col-lg-12">
-                <h6 className="text-white">Story Boarding</h6>
+                <div className="services-body position-relative overflow-hidden">
+                  {servicesContents.map((content, i) => (
+                    <Services
+                      key={i}
+                      title={content.title}
+                      description={content.description}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -144,8 +152,8 @@ export default function Home() {
                     type="button"
                     className="btn main-button d-flex align-items-center"
                   >
-                    Send
-                    <ArrowRightShort className="arrow-right fs-2 fw-bolder" />
+                    Submit
+                    <ArrowRightShort className="arrow-right fs-3 fw-bolder" />
                   </button>
                 </form>
               </div>
@@ -157,3 +165,86 @@ export default function Home() {
     </Fragment>
   );
 }
+
+function Services(props) {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => setOpen(!open);
+
+  return (
+    <>
+      <span onClick={handleClick} className="third-title me-3">
+        {props.title}
+      </span>
+      <div
+        className={`services-detail d-flex flex-column ${open ? "active" : ""}`}
+      >
+        <div className="button-close ms-auto">
+          <X onClick={handleClick} className="fs-1 ms-auto" />
+        </div>
+        <div className="services-oerlay px-lg-5">
+          <h5 className="third-title text-dark mb-3">{props.title}</h5>
+          <p className="description">{props.description}</p>
+        </div>
+      </div>
+    </>
+  );
+}
+
+const servicesContents = [
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis",
+  },
+  {
+    title: "Something",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores..",
+  },
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis Nesciunt ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores.",
+  },
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius et enetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Story Board.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+];
