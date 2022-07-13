@@ -94,17 +94,17 @@ export default function Footer() {
             <div className="w-50">
               <h5 className="mb-3">Contact</h5>
               <ul>
-                <li>example@mail.info</li>
-                <li>another@mail.info</li>
-                <li>021 88435439</li>
-                <li>021 909534905</li>
+                <li className="footer-link">example@mail.info</li>
+                <li className="footer-link">another@mail.info</li>
+                <li className="footer-link">021 88435439</li>
+                <li className="footer-link">021 909534905</li>
               </ul>
             </div>
             <div className="w-50">
               <h5 className="mb-3">Address</h5>
-              <p>
+              <p className="footer-link">
                 Jl. Something In <br /> Jakarta, No.32
-                <br /> Jakarta, Indonesia
+                <br /> DKI Jakarta, Indonesia
               </p>
             </div>
           </div>
