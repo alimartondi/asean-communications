@@ -10,7 +10,13 @@ import { ArrowRightShort, X } from "react-bootstrap-icons";
 export default function Home() {
   return (
     <Fragment>
-      <Head></Head>
+      <Head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#262161" />
+
+        <title>ASEAN Communications</title>
+      </Head>
       <Header />
       <main>
         <section className="hero">
