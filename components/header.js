@@ -17,7 +17,7 @@ export default function Header() {
       } header w-100 fixed-top`}
     >
       <div className="container d-flex justify-content-between align-items-center">
-        <Link to="hero" spy={true}>
+        <Link to="hero" spy={true} style={{ cursor: "pointer" }}>
           <span className="text-white">ASEAN Communications</span>
         </Link>
         <HamburgerMenu
