@@ -1,9 +1,11 @@
 import { useState } from "react";
-import Head from "next/head";
 import { Fragment } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { ArrowLeftShort, ArrowRightShort, X } from "react-bootstrap-icons";
+import { ArrowRightShort, X } from "react-bootstrap-icons";
 
 export default function Home() {
   return (
@@ -32,10 +34,30 @@ export default function Home() {
                   <br /> Netwrok
                 </h2>
               </div>
-              <div className="row">
-                <div className="col-lg-12">
-                  <hr />
-                  <p>logo here</p>
+            </div>
+            <div className="row">
+              <div className="col-lg-12">
+                <hr />
+                <div className="network-wrapper mt-4 mt-lg-5 mb-lg-5">
+                  {networkImages.map((image, i) => (
+                    <Link href={image.link}>
+                      <a>
+                        <div
+                          className="network-image d-block mx-auto text-center "
+                          key={i}
+                        >
+                          <Image
+                            src={image.image}
+                            alt={image.alt}
+                            layout="responsive"
+                            height={35}
+                            width={130}
+                            objectFit="contain"
+                          />
+                        </div>
+                      </a>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
@@ -53,9 +75,9 @@ export default function Home() {
               </div>
               <div className="col-lg-8">
                 <div className="row flex-column">
-                  <div className="col-lg-12 order-2 order-lg-1">
+                  <div className="col-lg-12 order-2 order-lg-1 mb-4">
                     <hr className="d-block d-lg-none" />
-                    <h3 className="third-title text-uppercase mb-3 mt-4 mt-lg-0">
+                    <h3 className="third-title text-uppercase mb-4 mt-4 mt-lg-0">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Repudiandae molestiae porro iure!
                     </h3>
@@ -66,18 +88,18 @@ export default function Home() {
                       corporis, hic quod esse doloribus!
                     </p>
                   </div>
-                  <div className="col-lg-12 order-1 order-lg-2 d-flex justify-content-between">
+                  <div className="col-lg-12 order-1 order-lg-2 d-flex justify-content-between text-main-blue">
                     <div>
                       <h1 className="main-title">80.000</h1>
-                      <p>People</p>
+                      <p className="description fw-bold">People</p>
                     </div>
                     <div>
                       <h1 className="main-title">80+</h1>
-                      <p>Markets</p>
+                      <p className="description fw-bold">Markets</p>
                     </div>
                     <div>
                       <h1 className="main-title">60+</h1>
-                      <p>Clients</p>
+                      <p className="description fw-bold">Clients</p>
                     </div>
                   </div>
                 </div>
@@ -166,6 +188,34 @@ export default function Home() {
   );
 }
 
+const networkImages = [
+  {
+    image: "/images/flourish-logo.svg",
+    alt: "Flourish Logo",
+    link: "https://www.iris-worldwide.com/find-us/jakarta/",
+  },
+  {
+    image: "/images/iris-logo.svg",
+    alt: "Iris Logo",
+    link: "https://www.iris-worldwide.com/find-us/jakarta/",
+  },
+  {
+    image: "/images/pabrik-logo.svg",
+    alt: "Pabrik Logo",
+    link: "https://pabrik.id/",
+  },
+  {
+    image: "/images/kabarmedia-logo.svg",
+    alt: "Kabar Media Logo",
+    link: "https://kabarmedia.com/home/",
+  },
+  {
+    image: "/images/nava-plus-logo.svg",
+    alt: "Nava Plus Logo",
+    link: "https://www.navaplus.com/",
+  },
+];
+
 function Services(props) {
   const [open, setOpen] = useState(false);
 
@@ -193,57 +243,82 @@ function Services(props) {
 
 const servicesContents = [
   {
-    title: "Story Board.",
+    title: "Strategy.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis",
   },
   {
-    title: "Something",
+    title: "Brand Communication.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores..",
   },
   {
-    title: "Story Board.",
+    title: "PR.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius Iusto asperiores illo at iste dolorum quaerat commodi.",
   },
   {
-    title: "Story Board.",
+    title: "Social Media.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa Iusto asperiores illo at iste dolorum quaerat commodi.",
   },
   {
-    title: "Story Board.",
+    title: "Research & Insights.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
   },
   {
-    title: "Story Board.",
+    title: "Web Design & Development.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
   },
   {
-    title: "Story Board.",
+    title: "Graphic Design.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis Nesciunt ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
   },
   {
-    title: "Story Board.",
+    title: "Product Design.",
     description:
       "Lorem ipsum dolor sit amet. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores.",
   },
   {
-    title: "Story Board.",
+    title: "Marketing.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
   },
   {
-    title: "Story Board.",
+    title: "Film.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius et enetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
   },
   {
-    title: "Story Board.",
+    title: "Story Telling.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Content.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Photography.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Books.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Digital Platforms & Integrations.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+  },
+  {
+    title: "Media.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
   },

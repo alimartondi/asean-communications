@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Link as Scroll } from "react-scroll";
+import { Facebook, Instagram, Linkedin } from "react-bootstrap-icons";
 
 export default function Footer() {
   return (
@@ -73,7 +74,7 @@ export default function Footer() {
             <div className="w-50">
               <h5 className="mb-3">Contact</h5>
               <ul>
-                <li>email@address.info</li>
+                <li>example@mail.info</li>
                 <li>another@mail.info</li>
                 <li>021 88435439</li>
                 <li>021 909534905</li>
@@ -95,8 +96,18 @@ export default function Footer() {
         </div>
         <div className="row">
           <div className="col-lg-12 d-flex justify-content-between">
-            <p>Copyright</p>
-            <div className="social-media"></div>
+            <small>Copyright | 2022</small>
+            <div className="social-media text-dark">
+              <span>
+                <Instagram className="fs-4" />
+              </span>
+              <span>
+                <Linkedin className="fs-4 ms-2" />
+              </span>
+              <span>
+                <Facebook className="fs-4 ms-2" />
+              </span>
+            </div>
           </div>
         </div>
       </div>
