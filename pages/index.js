@@ -40,12 +40,9 @@ export default function Home() {
                 <hr />
                 <div className="network-wrapper mt-4 mt-lg-5 mb-lg-5">
                   {networkImages.map((image, i) => (
-                    <Link href={image.link}>
+                    <Link href={image.link} key={i}>
                       <a>
-                        <div
-                          className="network-image d-block mx-auto text-center "
-                          key={i}
-                        >
+                        <div className="network-image d-block mx-auto text-center ">
                           <Image
                             src={image.image}
                             alt={image.alt}
@@ -64,7 +61,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="about py-5">
+        <section className="about py-3 py-lg-5">
           <div className="container">
             <div className="row">
               <div className="col-lg-4 mb-3 mb-lg-0">
@@ -108,7 +105,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services py-5 my-lg-5 bg-main-blue">
+        <section className="services py-5 mb-3 my-lg-5 bg-main-blue">
           <div className="container">
             <div className="row mb-3">
               <div className="col-lg-6">
@@ -134,7 +131,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="contact py-5">
+        <section className="contact py-3 py=lg-5">
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
