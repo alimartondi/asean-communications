@@ -18,22 +18,42 @@ export default function Footer() {
               <h5 className="mb-3">Our Network</h5>
               <ul>
                 <li>
-                  <Scroll to="hero" spy={true} className="footer-link">
+                  <Scroll
+                    to="network"
+                    spy={true}
+                    offset={-70}
+                    className="footer-link"
+                  >
                     Network
                   </Scroll>
                 </li>
                 <li>
-                  <Scroll to="hero" spy={true} className="footer-link">
+                  <Scroll
+                    to="about"
+                    spy={true}
+                    offset={-70}
+                    className="footer-link"
+                  >
                     About
                   </Scroll>
                 </li>
                 <li>
-                  <Scroll to="hero" spy={true} className="footer-link">
+                  <Scroll
+                    to="services"
+                    spy={true}
+                    offset={-70}
+                    className="footer-link"
+                  >
                     Services
                   </Scroll>
                 </li>
                 <li>
-                  <Scroll to="hero" spy={true} className="footer-link">
+                  <Scroll
+                    to="contact"
+                    spy={true}
+                    offset={-70}
+                    className="footer-link"
+                  >
                     Contact
                   </Scroll>
                 </li>

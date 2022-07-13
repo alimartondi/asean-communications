@@ -10,8 +10,6 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
-  //   State untuk menutup navbar ketika nav-link di klik
-
   return (
     <header
       className={`${
@@ -19,7 +17,9 @@ export default function Header() {
       } header w-100 fixed-top`}
     >
       <div className="container d-flex justify-content-between align-items-center">
-        <span className="text-white">ASEAN Communications</span>
+        <Link to="hero" spy={true}>
+          <span className="text-white">ASEAN Communications</span>
+        </Link>
         <HamburgerMenu
           isOpen={isOpen}
           menuClicked={handleClick}
@@ -46,6 +46,7 @@ export default function Header() {
           <Link
             to="network"
             spy={true}
+            offset={-70}
             onClick={handleClick}
             className="c-nav-link"
           >
@@ -54,6 +55,7 @@ export default function Header() {
           <Link
             to="about"
             spy={true}
+            offset={-70}
             onClick={handleClick}
             className="c-nav-link"
           >
@@ -62,6 +64,7 @@ export default function Header() {
           <Link
             to="services"
             spy={true}
+            offset={-70}
             onClick={handleClick}
             className="c-nav-link"
           >
@@ -71,7 +74,7 @@ export default function Header() {
             to="contact"
             spy={true}
             onClick={handleClick}
-            offset={-30}
+            offset={-70}
             className="c-nav-link"
           >
             Contact

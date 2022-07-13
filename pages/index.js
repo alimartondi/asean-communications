@@ -189,7 +189,7 @@ const networkImages = [
   {
     image: "/images/flourish-logo.svg",
     alt: "Flourish Logo",
-    link: "https://www.iris-worldwide.com/find-us/jakarta/",
+    link: "https://flourishdevelopment.vercel.app/",
   },
   {
     image: "/images/iris-logo.svg",
