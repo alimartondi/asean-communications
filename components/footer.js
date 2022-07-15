@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-lg-6 d-flex mb-3 mb-lg-0">
             <div className="w-50">
-              <h5 className="mb-3">Our Network</h5>
+              <h5 className="mb-3">Quick Links</h5>
               <ul>
                 <li>
                   <Scroll
@@ -24,7 +24,7 @@ export default function Footer() {
                     offset={-70}
                     className="footer-link"
                   >
-                    Network
+                    NETWORK
                   </Scroll>
                 </li>
                 <li>
@@ -34,7 +34,7 @@ export default function Footer() {
                     offset={-70}
                     className="footer-link"
                   >
-                    About
+                    ABOUT
                   </Scroll>
                 </li>
                 <li>
@@ -44,7 +44,7 @@ export default function Footer() {
                     offset={-70}
                     className="footer-link"
                   >
-                    Services
+                    SERVICES
                   </Scroll>
                 </li>
                 <li>
@@ -54,58 +54,79 @@ export default function Footer() {
                     offset={-70}
                     className="footer-link"
                   >
-                    Contact
+                    CONTACT
                   </Scroll>
                 </li>
               </ul>
             </div>
             <div className="w-50">
-              <h5 className="mb-3">Quik Links</h5>
+              <h5 className="mb-3">Our Network</h5>
               <ul>
                 <li>
-                  <Link href="/">
-                    <a className="footer-link">Flourish</a>
+                  <Link href="https://flourish.co.id">
+                    <a target="_blank" className="footer-link">
+                      Flourish
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.iris-worldwide.com/find-us/jakarta/">
-                    <a className="footer-link">Iris</a>
+                  <Link href="https://www.iris-worldwide.com/">
+                    <a target="_blank" className="footer-link">
+                      IRIS
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://pabrik.id/">
-                    <a className="footer-link">Pabrik</a>
+                    <a target="_blank" className="footer-link">
+                      Pabrik
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://kabarmedia.com/home/">
-                    <a className="footer-link">Kabarmedia</a>
+                    <a target="_blank" className="footer-link">
+                      Kabar Media
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://www.navaplus.com/">
-                    <a className="footer-link">Nava Plus</a>
+                    <a target="_blank" className="footer-link">
+                      Nava Plus
+                    </a>
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="col-lg-6 d-flex">
-            <div className="w-50">
+          <div className="col-lg-6 d-flex footer-contact">
+            <div className="footer-contact-item w-50">
               <h5 className="mb-3">Contact</h5>
               <ul>
-                <li className="footer-link">example@mail.info</li>
-                <li className="footer-link">another@mail.info</li>
-                <li className="footer-link">021 88435439</li>
-                <li className="footer-link">021 909534905</li>
+                <li>
+                  <Link href="mailto:info@flourish.co.id">
+                    <a className="footer-link">info@flourish.co.id</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="mailto:enquiries@flourish.co.id">
+                    <a className="footer-link">enquiries@flourish.co.id</a>
+                  </Link>
+                </li>
+                <li className="footer-link">+62 819-0828-5032</li>
               </ul>
             </div>
-            <div className="w-50">
+            <div className="footer-contact-item w-50">
               <h5 className="mb-3">Address</h5>
-              <p className="footer-link">
-                Jl. Something In <br /> Jakarta, No.32
-                <br /> DKI Jakarta, Indonesia
-              </p>
+              <Link href="https://www.google.com/maps/place/Kemang+point,+Jl.+Kemang+Raya+No.3,+RT.4%2FRW.1,+Bangka,+Kec.+Mampang+Prpt.,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12730/@-6.2559191,106.8149531,21z/data=!4m5!3m4!1s0x2e69f17faaec8343:0x65f4d81adf076ea4!8m2!3d-6.2559548!4d106.8150262">
+                <a target="_blank" className="footer-link">
+                  Kemang Point <br />2<sup>nd</sup> Floor #2-02B
+                  <br />
+                  Jl. Kemang Raya No. 3
+                  <br /> Jakarta Selatan
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -115,19 +136,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-12 d-flex justify-content-between">
-            <small>Copyright | 2022</small>
-            <div className="social-media text-dark">
-              <span>
-                <Instagram className="fs-4" />
-              </span>
-              <span>
-                <Linkedin className="fs-4 ms-2" />
-              </span>
-              <span>
-                <Facebook className="fs-4 ms-2" />
-              </span>
-            </div>
+          <div className="col-lg-6">
+            <small>&copy; PT. KREATIVITAS GANESHA SEJAHTERA | 2022</small>
           </div>
         </div>
       </div>

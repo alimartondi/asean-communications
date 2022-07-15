@@ -6,8 +6,38 @@ import Image from "next/image";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import { ArrowRightShort, X } from "react-bootstrap-icons";
+import { useForm } from "react-hook-form";
+import swal from "sweetalert";
 
 export default function Home() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm();
+
+  const onSubmit = async (data, e) => {
+    e.preventDefault();
+    const url =
+      "https://script.google.com/macros/s/AKfycbxZTcewbwnGbSoo8CAEc2bFon6i1fqv7_7ZU0UNKmtgofYVIMFALEZUcACnv8DZBUVD/exec";
+    const method = "POST";
+    const body = new FormData();
+    body.append("name", data.name);
+    body.append("email", data.email);
+    body.append("message", data.message);
+    try {
+      await fetch(url, { method, body });
+      swal({
+        title: "Thanks for your interest!",
+        text: "We'll be in touch soon!",
+        icon: "success",
+        buttons: false,
+      });
+    } catch {}
+    reset();
+  };
+
   return (
     <Fragment>
       <Head>
@@ -15,8 +45,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#262161" />
 
+        <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+
         <title>ASEAN Communications</title>
       </Head>
+      <Header />
       <Header />
       <main>
         <section className="hero">
@@ -24,7 +75,8 @@ export default function Home() {
             <div className="row h-100 align-items-center">
               <div className="col-lg-10 mx-auto">
                 <h1 className="main-title text-uppercase text-white text-center">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  We use data, design and creativity to execute meaningful
+                  campaigns
                 </h1>
               </div>
             </div>
@@ -37,7 +89,7 @@ export default function Home() {
               <div className="col-lg-6">
                 <h2 className="second-title text-uppercase">
                   Our
-                  <br /> Netwrok
+                  <br /> Network
                 </h2>
               </div>
             </div>
@@ -81,23 +133,24 @@ export default function Home() {
                   <div className="col-lg-12 order-2 order-lg-1 mb-4">
                     <hr className="d-block d-lg-none" />
                     <h3 className="third-title text-uppercase mb-4 mt-4 mt-lg-0">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Repudiandae molestiae porro iure!
+                      We tackle complex issues with creative story-telling and
+                      visual narratives, through campaigns that promote positive
+                      change across ASEAN.
                     </h3>
                     <p className="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Quam consequuntur repellat ut. Hic, odit? Blanditiis iure
-                      fuga numquam, adipisci maiores odio, libero vero eum ad
-                      corporis, hic quod esse doloribus!
+                      For over two decades we have worked with individuals and
+                      organisations to find the most effective ways of
+                      presenting their brands and sharing their stories, through
+                      a variety of media.
                     </p>
                   </div>
                   <div className="col-lg-12 order-1 order-lg-2 d-flex justify-content-between text-main-blue">
                     <div>
-                      <h1 className="main-title">80.000</h1>
+                      <h1 className="main-title">200+</h1>
                       <p className="description fw-bold">People</p>
                     </div>
                     <div>
-                      <h1 className="main-title">80+</h1>
+                      <h1 className="main-title">9+</h1>
                       <p className="description fw-bold">Markets</p>
                     </div>
                     <div>
@@ -111,19 +164,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services py-5 mb-3 my-lg-5 bg-main-blue">
-          <div className="container">
-            <div className="row mb-3">
-              <div className="col-lg-6">
+        <section className="services bg-main-blue py-5 mb-5">
+          <div className="container d-flex flex-column justify-content-center">
+            <div className="row py-3 py-lg-5 position-relative overflow-hidden gx-0">
+              <div className="col-lg-12 mb-lg-4">
                 <h2 className="second-title text-uppercase text-white">
                   Our <br />
                   Services
                 </h2>
               </div>
-            </div>
-            <div className="row">
               <div className="col-lg-12">
-                <div className="services-body position-relative overflow-hidden">
+                <div className="services-body">
                   {servicesContents.map((content, i) => (
                     <Services
                       key={i}
@@ -137,7 +188,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="contact py-3 py=lg-5">
+        <section className="contact py-3 py-lg-5">
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
@@ -147,37 +198,67 @@ export default function Home() {
                 </h2>
               </div>
               <div className="col-lg-6">
-                <form action="">
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-outline mb-3">
                     <input
+                      {...register("name", {
+                        required: true,
+                      })}
                       type="text"
                       id="fullName"
                       className="form-control custom-form rounded-0"
                       placeholder="Full name"
                     />
+                    {errors.name?.type === "required" && (
+                      <small className="text-danger ps-1">
+                        Name is required!
+                      </small>
+                    )}
                   </div>
                   <div className="form-outline mb-3">
                     <input
+                      {...register("email", {
+                        required: true,
+                        pattern:
+                          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      })}
                       type="email"
                       id="form1Example1"
                       className="form-control rounded-0"
                       placeholder="Email address"
                     />
+                    {errors.email?.type === "required" && (
+                      <small className="text-danger ps-1">
+                        Email is required!
+                      </small>
+                    )}
+                    {errors.email?.type === "pattern" && (
+                      <small className="text-danger ps-1">
+                        Use the correct email format!
+                      </small>
+                    )}
                   </div>
                   <div className="form-outline mb-4">
                     <textarea
-                      name="message"
+                      {...register("message", { required: true })}
                       id="message"
                       rows="5"
                       placeholder="Message"
                       className="form-control rounded-0"
-                    ></textarea>
+                    />
+                    {errors.message?.type === "required" && (
+                      <small className="text-danger ps-1">
+                        Message is required!
+                      </small>
+                    )}
                   </div>
                   <button
-                    type="button"
-                    className="btn main-button d-flex align-items-center"
+                    onClick={handleSubmit(onSubmit)}
+                    className={`${
+                      isSubmitting ? "disabled" : ""
+                    } btn main-button d-flex align-items-center`}
                   >
-                    Submit
+                    {isSubmitting ? "Submitting" : "Submit"}
                     <ArrowRightShort className="arrow-right fs-3 fw-bolder" />
                   </button>
                 </form>
@@ -195,12 +276,12 @@ const networkImages = [
   {
     image: "/images/flourish-logo.svg",
     alt: "Flourish Logo",
-    link: "https://flourishdevelopment.vercel.app/",
+    link: "https://flourish.co.id/",
   },
   {
     image: "/images/iris-logo.svg",
     alt: "Iris Logo",
-    link: "https://www.iris-worldwide.com/find-us/jakarta/",
+    link: "https://www.iris-worldwide.com/",
   },
   {
     image: "/images/pabrik-logo.svg",
@@ -248,81 +329,86 @@ const servicesContents = [
   {
     title: "Strategy.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis",
+      "We conduct market research using innovative tools, big data and proven methods to deliver insights and actionable recommendations for 		organizations and brands. We develop communication strategies through an insight-focused framework that clearly identifies problems, 		outlines objectives, and maps audience profiles and journeys to drive change.",
+  },
+  {
+    title: "Campaigns.",
+    description:
+      "Blending Advertising, PR and CRM, our teams leverage data and insights to create experiences that excite, and build engagement with our client's audiences.",
   },
   {
     title: "Brand Communication.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores..",
+      "From campaign ideation to production, we create, manage and amplify your key messages across platforms to effectively and efficiently reach your audience.",
   },
   {
     title: "PR.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "With a strong understanding of ASEAN cultures and identity, our PR network is able to effectively translate messages across the region with a focus on the unique facets of each country to build campaigns that resonate across Southeast Asia and Beyond.",
   },
   {
     title: "Social Media.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "ASEAN countries have up to 25% higher penetration rate of social media than the 42% of the global average. However, each country uses different messaging tools for communication. While some ASM favour WhatsApp, others are partial to Line or Messenger. Our network careful creates messages across the region to leverage the strengths of each local market to create social media campaigns with authenticity.",
   },
   {
     title: "Research & Insights.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "We execute market research using innovative tools, big data and proven research methods to deliver insights and actionable recommendations for brand growth in Southeast Asia and APAC through creative storytelling and technology.",
   },
   {
     title: "Web Design & Development.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "We plan digital strategies and develop custom websites and CRM systems, mobile applications, custom-made digital tools for enhanced functionality, as well as apps for data aggregation, marketing, analytics, and content management.",
   },
   {
     title: "Graphic Design.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis Nesciunt ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "Good design is good business and good design makes your brand look good: it’s the key to creating an emotional connection with people, both externally and internally, and establishing a sense of professionalism and trust.",
   },
   {
     title: "Product Design.",
     description:
-      "Lorem ipsum dolor sit amet. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores.",
+      "Taking all phases of the product life cycle into consideration, our designers develop aspects of a product that will directly impact the quality of the user experience, integrating aspects of form, fit, function, and visual appeal to create positive emotional connections. The success of this design process often determines the success and longevity of the product itself and its performance in consumer-driven markets.",
   },
   {
     title: "Marketing.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "We offer strategic marketing and communication solutions from market entry to growth for leading brands and startups in Southeast Asia.",
   },
   {
     title: "Film.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut? Deleniti perferendis vitae id illum hic perspiciatis. Debitis, sed eius! Nesciunt ipsa reiciendis, dolore est corporis eius et enetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "We harness the power of film and animation to tell stories through corporate documentaries, animated explainers, corporate presentations and TVCs, handling all aspects of development from planning and research to script development, voiceover, production and post-production, 3D and 2D animations and illustrations.",
   },
   {
-    title: "Story Telling.",
+    title: "Storytelling.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "Branding and design tell stories in which both words and visuals play a part. Stories sell, giving context and inspiring action outside the organistion, building culture and purpose within. The right stories, well told, transform perceptions and instigate meaningful actions. We help you find your story and then develop the best way to tell it to your chosen audiences.",
   },
   {
     title: "Content.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "Content marketing is complex: each brand is multi-dimensional, with a diversity of features that cannot always be simplified to a one-size-fits-all message for a target audience. Differentiation and authenticity are the qualities that can make for a memorable campaign, harnessing the strengths of brand and its community in a way that creates authentic engagement.",
   },
   {
     title: "Photography.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "Behind every image that creates an impact, there is a creative eye combined with professional experience, comprehension of technical requirements, and an ability to tell a story through a single captured moment. Our expertise covers advertising, commercial, editorial, landscape, architectural, and portrait photography. We see projects through all the way from photoshoot planning and management to coordination of shooting and post-production.",
   },
   {
     title: "Books.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "Our in-house editing and design team works closely with clients and individuals to craft their stories, collaborating with writers, photographers, and artists to develop the best medium for bringing each story to life.",
   },
   {
     title: "Digital Platforms & Integrations.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "From an idea to the comprehensive implementation of a Minimum Viable Product (MVP) for your digital platform. We execute over multiple iterations to optimize budget, and test each stage of development effectively and efficiently.",
   },
   {
     title: "Media.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corporis eius et eum accusantium autem harum officia veritatis suscipit quaerat, doloribus repellat tempora tenetur, error asperiores. Iusto asperiores illo at iste dolorum quaerat commodi.",
+      "From Digital Media to OOH, we use data and analytics to effectively plan your media budget with ongoing measurement and programmatic pivots that ensure we align demographics, media and creative messaging to maximise impact.",
   },
 ];
