@@ -27,8 +27,8 @@ export default function Header() {
           <Image
             src="/images/LOGO-KGS-01-initial-white.svg"
             alt="LOGO KGS-01 initial white.svg"
-            layout="fill"
-            objectFit="cover"
+            width={32}
+            height={32}
           />
         </Link>
         <HamburgerMenu

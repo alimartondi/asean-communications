@@ -19,24 +19,53 @@ export default function Home() {
 
   const onSubmit = async (data, e) => {
     e.preventDefault();
-    const url =
-      "https://script.google.com/macros/s/AKfycbxZTcewbwnGbSoo8CAEc2bFon6i1fqv7_7ZU0UNKmtgofYVIMFALEZUcACnv8DZBUVD/exec";
-    const method = "POST";
-    const body = new FormData();
-    body.append("name", data.name);
-    body.append("email", data.email);
-    body.append("message", data.message);
-    try {
-      await fetch(url, { method, body });
-      swal({
-        title: "Thanks for your interest!",
-        text: "We'll be in touch soon!",
-        icon: "success",
-        buttons: false,
+    console.log(data);
+
+    const formData = new FormData(); // Buat objek FormData yang benar
+
+    for (const key in data) {
+      formData.append(key, data[key]);
+    }
+
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbxZTcewbwnGbSoo8CAEc2bFon6i1fqv7_7ZU0UNKmtgofYVIMFALEZUcACnv8DZBUVD/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((response) => {
+        console.log("Success!", response);
+        swal({
+          title: "Thanks for your interest!",
+          text: "We'll be in touch soon!",
+          icon: "success",
+          buttons: false,
+        });
+      })
+      .catch((error) => {
+        console.error("Error", error.message);
       });
-    } catch {}
     reset();
   };
+
+  // const url =
+  //   "https://script.google.com/macros/s/AKfycbxZTcewbwnGbSoo8CAEc2bFon6i1fqv7_7ZU0UNKmtgofYVIMFALEZUcACnv8DZBUVD/exec";
+  // const method = "POST";
+  // const body = formData;
+  // body.append("name", data.name);
+  // body.append("email", data.email);
+  // body.append("message", data.message);
+  // try {
+  //   await fetch(url, { method, body });
+  //   swal({
+  //     title: "Thanks for your interest!",
+  //     text: "We'll be in touch soon!",
+  //     icon: "success",
+  //     buttons: false,
+  //   });
+  // } catch {}
+  // reset();
 
   return (
     <Fragment>
@@ -99,18 +128,15 @@ export default function Home() {
                 <div className="network-wrapper mt-4 mt-lg-5 mb-lg-5">
                   {networkImages.map((image, i) => (
                     <Link href={image.link} key={i}>
-                      <a>
-                        <div className="network-image d-block mx-auto text-center ">
-                          <Image
-                            src={image.image}
-                            alt={image.alt}
-                            layout="responsive"
-                            height={35}
-                            width={130}
-                            objectFit="contain"
-                          />
-                        </div>
-                      </a>
+                      <div className="network-image d-block mx-auto text-center ">
+                        <Image
+                          src={image.image}
+                          alt={image.alt}
+                          height={60}
+                          width={224}
+                          className="img-fluid"
+                        />
+                      </div>
                     </Link>
                   ))}
                 </div>

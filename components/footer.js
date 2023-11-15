@@ -63,38 +63,48 @@ export default function Footer() {
               <h5 className="mb-3">Our Network</h5>
               <ul>
                 <li>
-                  <Link href="https://flourish.co.id">
-                    <a target="_blank" className="footer-link">
-                      Flourish
-                    </a>
+                  <Link
+                    href="https://flourish.co.id"
+                    target="_blank"
+                    className="footer-link"
+                  >
+                    Flourish
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.iris-worldwide.com/">
-                    <a target="_blank" className="footer-link">
-                      IRIS
-                    </a>
+                  <Link
+                    href="https://www.iris-worldwide.com/"
+                    target="_blank"
+                    className="footer-link"
+                  >
+                    IRIS
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://pabrik.id/">
-                    <a target="_blank" className="footer-link">
-                      Pabrik
-                    </a>
+                  <Link
+                    href="https://pabrik.id/"
+                    target="_blank"
+                    className="footer-link"
+                  >
+                    Pabrik
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://kabarmedia.com/home/">
-                    <a target="_blank" className="footer-link">
-                      Kabar Media
-                    </a>
+                  <Link
+                    href="https://kabarmedia.com/home/"
+                    target="_blank"
+                    className="footer-link"
+                  >
+                    Kabar Media
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.navaplus.com/">
-                    <a target="_blank" className="footer-link">
-                      Nava Plus
-                    </a>
+                  <Link
+                    href="https://www.navaplus.com/"
+                    target="_blank"
+                    className="footer-link"
+                  >
+                    Nava Plus
                   </Link>
                 </li>
               </ul>
@@ -105,13 +115,19 @@ export default function Footer() {
               <h5 className="mb-3">Contact</h5>
               <ul>
                 <li>
-                  <Link href="mailto:info@flourish.co.id">
-                    <a className="footer-link">info@flourish.co.id</a>
+                  <Link
+                    href="mailto:info@flourish.co.id"
+                    className="footer-link"
+                  >
+                    info@flourish.co.id
                   </Link>
                 </li>
                 <li>
-                  <Link href="mailto:enquiries@flourish.co.id">
-                    <a className="footer-link">enquiries@flourish.co.id</a>
+                  <Link
+                    href="mailto:enquiries@flourish.co.id"
+                    className="footer-link"
+                  >
+                    enquiries@flourish.co.id
                   </Link>
                 </li>
                 <li className="footer-link">+62 819-0828-5032</li>
@@ -119,13 +135,15 @@ export default function Footer() {
             </div>
             <div className="footer-contact-item w-50">
               <h5 className="mb-3">Address</h5>
-              <Link href="https://www.google.com/maps/place/Kemang+point,+Jl.+Kemang+Raya+No.3,+RT.4%2FRW.1,+Bangka,+Kec.+Mampang+Prpt.,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12730/@-6.2559191,106.8149531,21z/data=!4m5!3m4!1s0x2e69f17faaec8343:0x65f4d81adf076ea4!8m2!3d-6.2559548!4d106.8150262">
-                <a target="_blank" className="footer-link">
-                  Kemang Point <br />2<sup>nd</sup> Floor #2-02B
-                  <br />
-                  Jl. Kemang Raya No. 3
-                  <br /> Jakarta Selatan
-                </a>
+              <Link
+                href="https://www.google.com/maps/place/Kemang+point,+Jl.+Kemang+Raya+No.3,+RT.4%2FRW.1,+Bangka,+Kec.+Mampang+Prpt.,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12730/@-6.2559191,106.8149531,21z/data=!4m5!3m4!1s0x2e69f17faaec8343:0x65f4d81adf076ea4!8m2!3d-6.2559548!4d106.8150262"
+                target="_blank"
+                className="footer-link"
+              >
+                Kemang Point <br />2<sup>nd</sup> Floor #2-02B
+                <br />
+                Jl. Kemang Raya No. 3
+                <br /> Jakarta Selatan
               </Link>
             </div>
           </div>
