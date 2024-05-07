@@ -373,6 +373,11 @@ const servicesContents = [
       "With a strong understanding of ASEAN cultures and identity, our PR network is able to effectively translate messages across the region with a focus on the unique facets of each country to build campaigns that resonate across Southeast Asia and Beyond.",
   },
   {
+    title: "Events",
+    description:
+      "We craft bespoke events that epitomise your brand's core values. From concept to execution, our team ensures every event, whether it's a high-profile brand activation, a knowledge seminar, or a cultural exhibition, delivers exceptional engagement and value. Our services cover creative design, logistical planning, and the integration of arts and knowledge, creating experiences that resonate with participants, foster connections, enhance knowledge sharing, and boost brand visibility effectively.",
+  },
+  {
     title: "Social Media.",
     description:
       "ASEAN countries have up to 25% higher penetration rate of social media than the 42% of the global average. However, each country uses different messaging tools for communication. While some ASM favour WhatsApp, others are partial to Line or Messenger. Our network careful creates messages across the region to leverage the strengths of each local market to create social media campaigns with authenticity.",
