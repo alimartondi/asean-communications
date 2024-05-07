@@ -155,7 +155,7 @@ export default function Footer() {
         </div>
         <div className="row">
           <div className="col-lg-6">
-            <small>&copy; PT. KREATIVITAS GANESHA SEJAHTERA | 2022</small>
+            <small>&copy; PT. KREATIVITAS GANESHA SEJAHTERA | 2024</small>
           </div>
         </div>
       </div>

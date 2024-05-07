@@ -305,9 +305,9 @@ const networkImages = [
     link: "https://flourish.co.id/",
   },
   {
-    image: "/images/iris-logo.svg",
-    alt: "Iris Logo",
-    link: "https://www.iris-worldwide.com/",
+    image: "/images/kabarmedia-logo.svg",
+    alt: "Kabar Media Logo",
+    link: "https://kabarmedia.com/home/",
   },
   {
     image: "/images/pabrik-logo.svg",
@@ -315,9 +315,9 @@ const networkImages = [
     link: "https://pabrik.id/",
   },
   {
-    image: "/images/kabarmedia-logo.svg",
-    alt: "Kabar Media Logo",
-    link: "https://kabarmedia.com/home/",
+    image: "/images/iris-logo.svg",
+    alt: "Iris Logo",
+    link: "https://www.iris-worldwide.com/",
   },
   {
     image: "/images/nava-plus-logo.svg",
