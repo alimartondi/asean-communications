@@ -373,7 +373,7 @@ const servicesContents = [
       "With a strong understanding of ASEAN cultures and identity, our PR network is able to effectively translate messages across the region with a focus on the unique facets of each country to build campaigns that resonate across Southeast Asia and Beyond.",
   },
   {
-    title: "Events",
+    title: "Events.",
     description:
       "We craft bespoke events that epitomise your brand's core values. From concept to execution, our team ensures every event, whether it's a high-profile brand activation, a knowledge seminar, or a cultural exhibition, delivers exceptional engagement and value. Our services cover creative design, logistical planning, and the integration of arts and knowledge, creating experiences that resonate with participants, foster connections, enhance knowledge sharing, and boost brand visibility effectively.",
   },
