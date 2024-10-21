@@ -19,7 +19,6 @@ export default function Home() {
 
   const onSubmit = async (data, e) => {
     e.preventDefault();
-    console.log(data);
 
     const formData = new FormData(); // Buat objek FormData yang benar
 
@@ -34,8 +33,7 @@ export default function Home() {
         body: formData,
       }
     )
-      .then((response) => {
-        console.log("Success!", response);
+      .then(() => {
         swal({
           title: "Thanks for your interest!",
           text: "We'll be in touch soon!",
@@ -43,8 +41,13 @@ export default function Home() {
           buttons: false,
         });
       })
-      .catch((error) => {
-        console.error("Error", error.message);
+      .catch(() => {
+        swal({
+          title: "Oops...",
+          text: "Something went wrong!",
+          icon: "error",
+          buttons: false,
+        });
       });
     reset();
   };
