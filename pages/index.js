@@ -96,8 +96,9 @@ export default function Home() {
 
         <title>ASEAN Communications</title>
       </Head>
+
       <Header />
-      <Header />
+
       <main>
         <section className="hero">
           <div className="container position-absolute h-100 start-0 end-0">
