@@ -127,7 +127,7 @@ export default function Home() {
                 <hr />
                 <div className="network-wrapper mt-4 mt-lg-5 mb-lg-5">
                   {networkImages.map((image, i) => (
-                    <Link href={image.link} key={i}>
+                    <Link href={image.link} key={i} target="_blank">
                       <div className="network-image d-block mx-auto text-center">
                         <Image
                           src={image.image}
