@@ -73,6 +73,15 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    href="https://deltaanalysis.com/"
+                    target="_blank"
+                    className="footer-link"
+                  >
+                    Delta Analysis
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="https://www.iris-worldwide.com/"
                     target="_blank"
                     className="footer-link"
