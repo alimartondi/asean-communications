@@ -52,24 +52,6 @@ export default function Home() {
     reset();
   };
 
-  // const url =
-  //   "https://script.google.com/macros/s/AKfycbxZTcewbwnGbSoo8CAEc2bFon6i1fqv7_7ZU0UNKmtgofYVIMFALEZUcACnv8DZBUVD/exec";
-  // const method = "POST";
-  // const body = formData;
-  // body.append("name", data.name);
-  // body.append("email", data.email);
-  // body.append("message", data.message);
-  // try {
-  //   await fetch(url, { method, body });
-  //   swal({
-  //     title: "Thanks for your interest!",
-  //     text: "We'll be in touch soon!",
-  //     icon: "success",
-  //     buttons: false,
-  //   });
-  // } catch {}
-  // reset();
-
   return (
     <Fragment>
       <Head>
@@ -97,7 +79,7 @@ export default function Home() {
           href="/favicon-16x16.png"
         />
 
-        <title>ASEAN Communications</title>
+        <title>Strategic Insights & Campaigns</title>
       </Head>
 
       <Header />
@@ -109,7 +91,7 @@ export default function Home() {
               <div className="col-lg-10 mx-auto">
                 <h1 className="main-title text-uppercase text-white text-center">
                   We use data, design and creativity to execute meaningful
-                  campaigns
+                  research & campaigns
                 </h1>
               </div>
             </div>
