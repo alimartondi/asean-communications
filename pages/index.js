@@ -128,7 +128,7 @@ export default function Home() {
                 <div className="network-wrapper mt-4 mt-lg-5 mb-lg-5">
                   {networkImages.map((image, i) => (
                     <Link href={image.link} key={i}>
-                      <div className="network-image d-block mx-auto text-center ">
+                      <div className="network-image d-block mx-auto text-center">
                         <Image
                           src={image.image}
                           alt={image.alt}
@@ -303,6 +303,11 @@ const networkImages = [
     image: "/images/flourish-logo.svg",
     alt: "Flourish Logo",
     link: "https://flourish.co.id/",
+  },
+  {
+    image: "/images/deltaanalysis-logo.svg",
+    alt: "Delta Analysis Logo",
+    link: "https://deltaanalysis.com/",
   },
   {
     image: "/images/kabarmedia-logo.svg",
