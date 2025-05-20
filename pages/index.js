@@ -292,6 +292,11 @@ const networkImages = [
     link: "https://flourish.co.id/",
   },
   {
+    image: "/images/iris-logo.svg",
+    alt: "Iris Logo",
+    link: "https://www.iris-worldwide.com/",
+  },
+  {
     image: "/images/deltaanalysis-logo.svg",
     alt: "Delta Analysis Logo",
     link: "https://deltaanalysis.com/",
@@ -306,11 +311,7 @@ const networkImages = [
     alt: "Pabrik Logo",
     link: "https://pabrik.id/",
   },
-  {
-    image: "/images/iris-logo.svg",
-    alt: "Iris Logo",
-    link: "https://www.iris-worldwide.com/",
-  },
+
   {
     image: "/images/nava-plus-logo.svg",
     alt: "Nava Plus Logo",
