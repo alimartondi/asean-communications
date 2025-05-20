@@ -307,15 +307,14 @@ const networkImages = [
     link: "https://kabarmedia.com/home/",
   },
   {
-    image: "/images/pabrik-logo.svg",
-    alt: "Pabrik Logo",
-    link: "https://pabrik.id/",
-  },
-
-  {
     image: "/images/nava-plus-logo.svg",
     alt: "Nava Plus Logo",
     link: "https://www.navaplus.com/",
+  },
+  {
+    image: "/images/pabrik-logo.svg",
+    alt: "Pabrik Logo",
+    link: "https://pabrik.id/",
   },
 ];
 

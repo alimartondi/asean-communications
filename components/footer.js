@@ -89,16 +89,6 @@ export default function Footer() {
                     Delta Analysis
                   </Link>
                 </li>
-
-                <li>
-                  <Link
-                    href="https://pabrik.id/"
-                    target="_blank"
-                    className="footer-link"
-                  >
-                    Pabrik
-                  </Link>
-                </li>
                 <li>
                   <Link
                     href="https://kabarmedia.com/home/"
@@ -115,6 +105,15 @@ export default function Footer() {
                     className="footer-link"
                   >
                     Nava Plus
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://pabrik.id/"
+                    target="_blank"
+                    className="footer-link"
+                  >
+                    Pabrik
                   </Link>
                 </li>
               </ul>
