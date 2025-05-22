@@ -98,7 +98,7 @@ export default function Footer() {
                     Kabar Media
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="https://www.navaplus.com/"
                     target="_blank"
@@ -106,7 +106,7 @@ export default function Footer() {
                   >
                     Nava Plus
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="https://pabrik.id/"

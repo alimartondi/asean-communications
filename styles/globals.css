@@ -53,6 +53,11 @@ li {
   color: var(--color-primary);
 }
 
+.aspect-3-2 {
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+
 .header,
 .nav-bar {
   transition: all 0.3s ease-in;
@@ -125,7 +130,7 @@ li {
 
 .network-wrapper {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   overflow-x: auto;
   overflow-y: hidden;
   text-align: center;
@@ -244,6 +249,19 @@ li {
 .footer-link:hover {
   color: #352f81;
   text-decoration: underline !important;
+}
+
+/* === Case Study === */
+
+.second__title {
+  font-size: 32px;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.case-study-hero {
+  padding-top: 160px;
+  padding-bottom: 48px;
 }
 
 @media (min-width: 768px) {

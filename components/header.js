@@ -17,7 +17,7 @@ export default function Header() {
         isOntop ? "bg-transparent py-4 py-lg-5" : "scrolled shadow py-3 py-lg-4"
       } header w-100 fixed-top`}
     >
-      <div className="container d-flex justify-content-between align-items-center">
+      <div className="container d-flex justify-content-between align-items-center px-3">
         <Link
           to="hero"
           spy={true}

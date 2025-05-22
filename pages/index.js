@@ -306,11 +306,11 @@ const networkImages = [
     alt: "Kabar Media Logo",
     link: "https://kabarmedia.com/home/",
   },
-  {
-    image: "/images/nava-plus-logo.svg",
-    alt: "Nava Plus Logo",
-    link: "https://www.navaplus.com/",
-  },
+  // {
+  //   image: "/images/nava-plus-logo.svg",
+  //   alt: "Nava Plus Logo",
+  //   link: "https://www.navaplus.com/",
+  // },
   {
     image: "/images/pabrik-logo.svg",
     alt: "Pabrik Logo",
