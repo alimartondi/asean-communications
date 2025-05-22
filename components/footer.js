@@ -5,7 +5,7 @@ import { Facebook, Instagram, Linkedin } from "react-bootstrap-icons";
 
 export default function Footer() {
   return (
-    <footer className="py-3 py-lg-5">
+    <footer className="pb-3 pb-lg-5">
       <div className="container">
         <div className="row mb-lg-5">
           <div className="col-lg-12">

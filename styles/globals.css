@@ -31,6 +31,7 @@ li {
 .main-title {
   font-size: 30px;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .second-title {
@@ -177,7 +178,7 @@ li {
   border-radius: 0;
   font-size: 14px;
   font-weight: 600;
-  padding: 8px 24px;
+  padding: 12px 24px;
   letter-spacing: 2px;
 }
 
@@ -315,11 +316,17 @@ li {
   .footer-link {
     font-weight: 500;
   }
+
+  /* === Case Study === */
+
+  .second__title {
+    font-size: 48px;
+  }
 }
 
 @media (min-width: 1024px) {
   .main-title {
-    font-size: 60px;
+    font-size: 56px;
   }
 
   .asean-communications-logo {
