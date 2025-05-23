@@ -17,9 +17,9 @@ export default function CaseStudyIntro() {
             </h6>
             <p>
               As part of our submission for the IA Skills and Katalis
-              initiative, we've curated examples that reflect our ability to
-              support government-backed platforms through digital campaigns, PR
-              strategies, stakeholder alignment, and culturally relevant
+              initiative, we&apos;ve curated examples that reflect our ability
+              to support government-backed platforms through digital campaigns,
+              PR strategies, stakeholder alignment, and culturally relevant
               storytelling.
             </p>
             <p>

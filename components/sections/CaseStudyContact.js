@@ -51,7 +51,7 @@ export default function CaseStudyContact() {
         <div className="row">
           <div className="col-lg-7">
             <h2 className="second__title text-uppercase">Get in touch</h2>
-            <p>Tell us more about yourself and what you've got in mind</p>
+            <p>Tell us more about yourself and what you&apos;ve got in mind</p>
           </div>
           <div className="col-lg-5">
             <form onSubmit={handleSubmit(onSubmit)}>
