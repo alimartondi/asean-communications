@@ -3,13 +3,11 @@ export default function CaseStudyAbout() {
     <section className="about py-3 py-lg-5 bg-light">
       <div className="container py-lg-5">
         <div className="row">
-          <div className="col-lg-4 mb-3 mb-lg-0">
-            <h2 className="second__title text-uppercase">
-              About <br /> Us
-            </h2>
+          <div className="col-lg-5 mb-3 mb-lg-0">
+            <h2 className="second__title text-uppercase">About Us</h2>
             <hr className="d-block d-lg-none" />
           </div>
-          <div className="col-lg-8">
+          <div className="col-lg-7">
             <div className="row flex-column">
               <div className="col-lg-12 order-2 order-lg-1 mb-4">
                 <hr className="d-block d-lg-none" />

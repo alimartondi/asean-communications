@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function CaseStudyList() {
@@ -16,7 +17,10 @@ export default function CaseStudyList() {
         <div className="row">
           {caseStudies.map((item, index) => (
             <div className="col-lg-6 col-md-6 mb-4" key={index}>
-              <div className="d-flex flex-column gap-3">
+              <Link
+                href="/"
+                className="d-flex flex-column gap-3 case-study-card"
+              >
                 <div className="aspect-3-2 bg-primary">
                   <Image
                     src={item.image}
@@ -33,7 +37,7 @@ export default function CaseStudyList() {
                   <h4 className="card-title mb-1">{item.title}</h4>
                   <p className="mb-0">{item.description}</p>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

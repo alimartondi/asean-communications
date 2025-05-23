@@ -29,7 +29,7 @@ li {
 }
 
 .main-title {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 700;
   text-wrap: balance;
 }
@@ -265,9 +265,22 @@ li {
   padding-bottom: 48px;
 }
 
+.case-study-card {
+  text-decoration: none;
+  color: #212529;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.case-study-card:hover {
+  color: #212529;
+  text-decoration: none;
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
   .main-title {
-    font-size: 45px;
+    font-size: 48px;
   }
 
   .second-title {

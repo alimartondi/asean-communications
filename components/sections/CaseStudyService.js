@@ -8,8 +8,7 @@ export default function CaseStudyService() {
         <div className="row position-relative overflow-hidden gx-0">
           <div className="col-lg-12 mb-lg-4">
             <h2 className="second__title text-uppercase text-white">
-              Our <br />
-              Services
+              Our Services
             </h2>
           </div>
           <div className="col-lg-12">
