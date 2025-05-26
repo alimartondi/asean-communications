@@ -49,25 +49,25 @@ export default function CaseStudyList() {
 
 const caseStudies = [
   {
-    url: "",
+    url: "#",
     image: "/images/FLSRH-Comm-strategy-Thumbnail.jpg",
     title: "JAIF",
     description: "JAIF Communication Strategy Framework",
   },
   {
-    url: "",
+    url: "#",
     image: "/images/FLSRH-Golden-Mission-Web-Thumbnail.jpg",
     title: "ASEAN-Japan 50",
     description: "Mission Accomplished: Games to Engage and Educate",
   },
   {
-    url: "",
+    url: "#",
     image: "/images/NAHP-Thumbnail.jpg",
     title: "NAHP",
     description: "Impactful Storytelling for Sustainable Housing",
   },
   {
-    url: "",
+    url: "#",
     image: "/images/FLSRH-Oxfam-Web-Thumbnail.jpg",
     title: "OXFAM",
     description: "Innovation for a More Equal Asia",
