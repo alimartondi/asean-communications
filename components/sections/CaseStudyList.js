@@ -49,31 +49,37 @@ export default function CaseStudyList() {
 
 const caseStudies = [
   {
-    url: "#",
+    url: "https://flourish.co.id/work/case-study/asean-japan-brand-communication-for-integration-fund-jaif",
     image: "/images/FLSRH-Comm-strategy-Thumbnail.jpg",
     title: "JAIF",
     description: "JAIF Communication Strategy Framework",
   },
   {
-    url: "#",
-    image: "/images/FLSRH-Golden-Mission-Web-Thumbnail.jpg",
+    url: "https://flourish.co.id/work/case-study/asean-japan-50-brand-activation-through-cross-platform-games",
+    image: "/images/IASE-Case-Study-Website-Thumbnail-ASEAN50.jpg",
     title: "ASEAN-Japan 50",
     description: "Mission Accomplished: Games to Engage and Educate",
   },
   {
-    url: "#",
-    image: "/images/NAHP-Thumbnail.jpg",
+    url: "https://flourish.co.id/work/case-study/nahp-pupr-world-bank-book-film-strategic-communication",
+    image: "/images/IASE-Case-Study-Website-Thumbnail-NAHP.jpg",
     title: "NAHP",
     description: "Impactful Storytelling for Sustainable Housing",
   },
   {
-    url: "#",
-    image: "/images/FLSRH-Oxfam-Web-Thumbnail.jpg",
+    url: "https://flourish.co.id/work/case-study/oxfam-innovation-for-a-more-equal-asia",
+    image: "/images/IASE-Case-Study-Website-Thumbnail-OXFAM.jpg",
     title: "OXFAM",
     description: "Innovation for a More Equal Asia",
   },
   {
-    url: "/documents/Iris-Jakarta-x-British-Embassy-Jakarta-HEI.pdf",
+    url: "https://flourish.co.id/work/case-study/eria-web-development",
+    image: "/images/IASE-Case-Study-Website-Thumbnail-ERIA.jpg",
+    title: "ERIA",
+    description: "Digital Evolution of a Think Tank: Transforming ERIA.org",
+  },
+  {
+    url: "/documents/Iris-Jakarta-x-British-Embassy-Jakarta-HEI",
     image: "/images/CASE_01_BritEmbassy.jpg",
     title: "British Embassy Jakarta | Higher Education Institutions",
     description:
@@ -110,5 +116,11 @@ const caseStudies = [
     image: "/images/CASE_06_STB.jpg",
     title: "Singapore Tourism Board",
     description: "Inspiring Indonesian travelers to choose Singapore",
+  },
+  {
+    url: "/documents/Digital-Campaigns-and-Performance-Marketing-FLRSH-X-IRIS.pdf",
+    image: "/images/IASE-Case-Study-Website-FLOURISH-x-IRIS.jpg",
+    title: "Various Clients",
+    description: "Digital Campaigns and Performance Marketing",
   },
 ];
