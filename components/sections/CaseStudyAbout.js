@@ -1,6 +1,6 @@
 export default function CaseStudyAbout() {
   return (
-    <section className="about py-3 py-lg-5 bg-light">
+    <section className="about py-5 bg-light">
       <div className="container py-lg-5">
         <div className="row">
           <div className="col-lg-5 mb-3 mb-lg-0">
